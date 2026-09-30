@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let's talk | Ana the Marketeer</title>
+  <meta name="description" content="Book a 1:1 strategy session, ask about fractional CMO support, or send Ana the Marketeer a message.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Ana the <span>Marketeer</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#watch">Watch</a>
+      <a href="index.html#work">Work with me</a>
+      <a href="index.html#course">Course</a>
+      <a href="index.html#about">About</a>
+      <a class="btn btn--small" href="contact.html">Let's talk &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Let's talk about your brand.</h1>
+      <p>Pick the route that fits. Not sure which one? Send a message and I'll point you to the right one.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="routes">
+        <div class="route">
+          <h3>1:1 strategy session</h3>
+          <p>A live working session on your positioning, your messaging or your next move. Fill out the booking form and I'll follow up to schedule.</p>
+          <a class="btn btn--dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdOrKXsU8K7JtIJAFMZO_SH9Jf5i1UbGmYV7R2LrwHs5Z0cFw/viewform?usp=header">Booking form &rarr;</a>
+        </div>
+        <div class="route">
+          <h3>Fractional CMO or a team</h3>
+          <p>Need ongoing strategic leadership, or strategy plus execution? Tell me about your business and where you're stuck.</p>
+          <a class="btn btn--outline" href="#message">Send a message &rarr;</a>
+        </div>
+        <div class="route">
+          <h3>SEO, email and growth</h3>
+          <p>Marketing for businesses and nonprofits lives at my agency, Phlare Marketing.</p>
+          <a class="btn btn--outline" href="https://phlare.ca">Visit phlare.ca &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="message" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Send a message</h2>
+        <p class="lead">I read everything and reply within a few business days.</p>
+      </div>
+
+      <!-- Replace REPLACE-ME-FORM-ID with your Formspree form ID (free at formspree.io) -->
+      <form class="contact-form" action="https://formspree.io/f/REPLACE-ME-FORM-ID" method="post">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="topic">What's this about?</label>
+          <select id="topic" name="topic">
+            <option value="session">1:1 strategy session</option>
+            <option value="audit">Brand audit</option>
+            <option value="cmo">Fractional CMO</option>
+            <option value="team">Strategy + execution with a team</option>
+            <option value="course">Branding Foundations course question</option>
+            <option value="collab">Collaboration or press</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Tell me about your brand and what you need help with</label>
+          <textarea id="msg" name="message" required></textarea>
+        </div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div><button class="btn btn--dark" type="submit">Send message</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>&copy; <span id="year">2026</span> Ana the Marketeer</div>
+    <div>
+      <a href="https://www.youtube.com/@AnaTheMarketeer">YouTube</a>
+      <a href="https://www.instagram.com/anathemarketeer">Instagram</a>
+      <a href="https://phlare.ca">Phlare Marketing</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  // Pre-select the topic when arriving from a card on the homepage
+  var t = new URLSearchParams(location.search).get("topic");
+  if (t) { var s = document.getElementById("topic"); if (s) s.value = t; }
+</script>
+</body>
+</html>
