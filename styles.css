@@ -529,7 +529,8 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .contact-form { display: grid; grid-template-columns: minmax(0,1fr); gap: 18px; max-width: 660px; }
 .contact-form input, .contact-form select, .contact-form textarea { max-width: 100%; box-sizing: border-box; }
 .contact-form label { font-weight: 600; font-size: 0.95rem; }
-.contact-form .field { display: grid; gap: 6px; }
+.contact-form .field { display: grid; grid-template-columns: minmax(0,1fr); gap: 6px; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; }
 .contact-form textarea { min-height: 160px; resize: vertical; }
 .hp { position: absolute; left: -9999px; }
 .band { background: var(--paper); }
