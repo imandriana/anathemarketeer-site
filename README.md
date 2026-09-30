@@ -3,19 +3,20 @@
 Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage (nine sections: hero, YouTube, offers, funnel philosophy, proof, content, newsletter, course, about, final CTA)
+- `index.html` — homepage (order: hero, compact newsletter opt-in, ticker, YouTube, ways to work, course, funnel philosophy, about, proof, content, final CTA)
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
 - `script.js` — newsletter pop-up (shows once after 30s or 55% scroll, then stays away for 14 days)
+- `logo.png`, `ana-hero.jpg`, `course-header.jpg` — images used on the site
 
 ## Still to do
 - `contact.html`: replace `REPLACE-ME-FORM-ID` with a Formspree form ID, or switch the contact page to the booking form only.
-- Add photos at the top level of the repo: `ana-hero.jpg` (portrait crop) and `ana-about.jpg`. Until they exist, placeholder frames show.
+- The About section reuses `ana-hero.jpg`. To use a second photo, add it (e.g. `ana-about.jpg`) and change the `src` in the About section of `index.html`.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
 - Keep the stats (13K+ subscribers, etc.) accurate as they change.
 
 ## Already connected
-- Course: Thinkific Brand Foundations link
+- Course: Thinkific Branding Foundations link
 - Booking: Google Form
 - Newsletter: Kit form `8576546` (both the on-page form and the pop-up)
 - YouTube and Instagram links
