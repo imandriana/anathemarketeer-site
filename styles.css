@@ -95,7 +95,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding-block: 18px;
+  padding-block: 12px;
 }
 .logo {
   font-family: var(--head);
@@ -105,6 +105,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   letter-spacing: 0.01em;
 }
 .logo span { color: var(--yellow); }
+.logo img { height: 52px; width: auto; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a:not(.btn) { text-decoration: none; font-weight: 500; font-size: 0.95rem; }
 .nav a:not(.btn):hover { color: var(--yellow); }
@@ -114,7 +115,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .hero {
   background: var(--azure);
   color: var(--white);
-  padding: clamp(40px, 6vw, 80px) 0 clamp(72px, 10vw, 130px);
+  padding: clamp(28px, 4vw, 52px) 0 clamp(40px, 5vw, 64px);
   overflow: hidden;
 }
 .hero-grid {
@@ -124,24 +125,26 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   align-items: center;
 }
 .hero h1 {
-  font-size: clamp(3.4rem, 9.4vw, 8rem);
+  font-size: clamp(2rem, 4.7vw, 4rem);
   font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.3em;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  max-width: 16ch;
+  margin-bottom: 0.4em;
   animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 .hero .sub {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
   max-width: 34em;
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.92);
   animation: rise 0.7s 0.12s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 2rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 1.4rem; }
 
 .stat-line {
   list-style: none;
-  margin: 2.2rem 0 0;
+  margin: 1.4rem 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -154,10 +157,10 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .stat-line li:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
 .stat-line strong { color: var(--yellow); font-family: var(--head); font-size: 1.2rem; }
 
-.face-wrap { position: relative; justify-self: center; width: min(420px, 100%); }
+.face-wrap { position: relative; justify-self: center; width: min(360px, 100%); }
 .face {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background: var(--yellow);
   border-radius: var(--radius);
   transform: rotate(3deg);
@@ -173,7 +176,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   font-size: 1.4rem;
   line-height: 1.1;
 }
-.face img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.face img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .sticker {
   position: absolute;
   left: -22px;
@@ -418,8 +421,27 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 @media (max-width: 900px) { .video-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Newsletter ---------- */
-.signup { background: var(--azure); color: var(--white); }
-.signup h2 { max-width: 15ch; }
+/* Compact two-column opt-in, sits under the hero (about 150px tall on desktop) */
+.optin { background: var(--azure-soft); color: var(--white); padding: 26px 0; }
+.optin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px 40px;
+  align-items: center;
+}
+.optin h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.05; margin: 0 0 0.3em; max-width: none; }
+.optin p { margin: 0; font-size: 0.95rem; max-width: none; color: rgba(255, 255, 255, 0.9); }
+.optin .signup-form { margin: 0; max-width: none; flex-wrap: nowrap; gap: 12px; }
+.optin .signup-form input[type="email"] { flex: 1 1 auto; min-width: 0; padding: 0.75em 1em; }
+.optin .btn { padding: 0.8em 1.3em; font-size: 0.95rem; white-space: nowrap; }
+.optin .fineprint { margin: 0.6rem 0 0; font-size: 0.8rem; }
+@media (max-width: 800px) {
+  .optin { padding: 18px 0; }
+  .optin-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .optin-grid > div:first-child p { display: none; }
+  .optin h2 { margin: 0; }
+  .optin .fineprint { margin-top: 0.4rem; }
+}
 .signup-form {
   display: flex;
   flex-wrap: wrap;
@@ -458,20 +480,17 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .course-card h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
 .course-card .btn { background: var(--azure); border-color: var(--azure); color: var(--white); box-shadow: 4px 4px 0 var(--white); }
 .course-card .btn:hover { box-shadow: 7px 7px 0 var(--white); }
-.course-name {
-  font-family: var(--display);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 0.95;
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
-  background: var(--azure);
-  color: var(--yellow);
+.course-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 4px solid var(--azure);
   border-radius: var(--radius);
-  padding: 30px 26px;
+  box-shadow: 6px 6px 0 var(--azure);
   transform: rotate(2deg);
 }
-.course-name small { display: block; font-family: var(--body); font-weight: 500; font-size: 0.95rem; text-transform: none; color: var(--white); margin-top: 14px; letter-spacing: 0; }
-@media (max-width: 900px) { .course-card { grid-template-columns: 1fr; } .course-name { transform: none; } }
+@media (max-width: 900px) { .course-card { grid-template-columns: 1fr; } .course-img { transform: none; } }
 
 /* ---------- 8. About ---------- */
 .about { background: var(--paper); }
@@ -481,7 +500,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   gap: clamp(28px, 6vw, 80px);
   align-items: center;
 }
-.about .face { transform: rotate(-3deg); background: var(--azure); color: var(--yellow); box-shadow: 10px 10px 0 var(--yellow); }
+.about .face { aspect-ratio: 4 / 5; transform: rotate(-3deg); background: var(--azure); color: var(--yellow); box-shadow: 10px 10px 0 var(--yellow); }
 .about h2 { max-width: 13ch; }
 .story { margin-top: 1.4rem; }
 .story summary {
@@ -509,9 +528,10 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .cta-final h2 {
   font-family: var(--display);
   text-transform: uppercase;
-  font-size: clamp(2.8rem, 8vw, 6.6rem);
+  font-size: clamp(2.3rem, 8vw, 6.6rem);
   max-width: 14ch;
   line-height: 0.98;
+  overflow-wrap: break-word;
 }
 .cta-final .btn { background: var(--azure); border-color: var(--azure); color: var(--white); box-shadow: 5px 5px 0 var(--white); }
 .cta-final .btn:hover { box-shadow: 8px 8px 0 var(--white); }

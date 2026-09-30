@@ -8,6 +8,7 @@
   <meta property="og:title" content="Ana the Marketeer">
   <meta property="og:description" content="Marketing that makes people give a damn. Strategy, YouTube and a course for building a brand people remember.">
   <meta property="og:type" content="website">
+  <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html">Ana the <span>Marketeer</span></a>
+    <a class="logo" href="index.html"><img src="logo.png" alt="Ana the Marketeer"></a>
     <nav class="nav" aria-label="Main">
       <a href="#watch">Watch</a>
       <a href="#work">Work with me</a>
@@ -49,12 +50,28 @@
       </div>
 
       <div class="face-wrap">
-        <!-- PHOTO: save a photo as ana-hero.jpg next to index.html. Portrait crop (4:5) works best. -->
         <div class="face">
-          <span>Your photo goes here</span>
-          <img src="ana-hero.jpg" alt="Ana, the strategist and creator behind Ana the Marketeer" onerror="this.remove()">
+          <img src="ana-hero.jpg" alt="Ana, seated on a stool in a dark turtleneck and ripped jeans, looking at the camera">
         </div>
         <div class="sticker">Professional<br>overthinker</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER OPT-IN (compact, two columns) -->
+  <section class="optin" id="newsletter">
+    <div class="wrap optin-grid">
+      <div>
+        <h2>Get the free Authentic Branding Checklist.</h2>
+        <p>Join the Marketeers Memo, my weekly newsletter on branding through pop culture.</p>
+      </div>
+      <div>
+        <form class="signup-form" action="https://app.kit.com/forms/8576546/subscriptions" method="post">
+          <label class="hp" for="email-main">Email</label>
+          <input id="email-main" type="email" name="email_address" placeholder="Your email" required>
+          <button class="btn" type="submit">Send it</button>
+        </form>
+        <p class="fineprint">One email a week. Unsubscribe whenever.</p>
       </div>
     </div>
   </section>
@@ -92,7 +109,7 @@
     </div>
   </section>
 
-  <!-- 3. WHAT I DO -->
+  <!-- 3. WAYS TO WORK WITH ME -->
   <section class="work" id="work">
     <div class="wrap">
       <h2>Ways to work with me.</h2>
@@ -125,7 +142,21 @@
     </div>
   </section>
 
-  <!-- 4. PHILOSOPHY -->
+  <!-- 4. COURSE -->
+  <section class="course" id="course">
+    <div class="wrap">
+      <div class="course-card">
+        <div>
+          <h2>Want to build the brand yourself?</h2>
+          <p class="lead">Branding Foundations is a practical course for figuring out who you are, what you stand for, and how to turn that into a brand people remember.</p>
+          <a class="btn" href="https://themarketeers.thinkific.com/products/courses/brand-foundations">Explore the course &rarr;</a>
+        </div>
+        <img class="course-img" src="course-header.jpg" alt="Branding Foundations, a course by Ana the Marketeer" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PHILOSOPHY -->
   <section class="philosophy">
     <div class="wrap">
       <p class="statement">A great brand gets attention. <span class="second">A great funnel knows what to do with it.</span></p>
@@ -141,7 +172,30 @@
     </div>
   </section>
 
-  <!-- 5. PROOF -->
+  <!-- 6. ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="face-wrap">
+        <!-- Uses the same photo as the hero for now. To use a different one, save it as ana-about.jpg and change the src below. -->
+        <div class="face">
+          <img src="ana-hero.jpg" alt="Ana, seated on a stool in a dark turtleneck, relaxed and looking at the camera">
+        </div>
+      </div>
+      <div>
+        <h2>Hi, I'm Ana. I'm obsessed with why people care about things.</h2>
+        <p class="lead">Marketing, culture and storytelling have been the same obsession since I was 19. I want to know why one brand becomes a cult favourite and another gets scrolled past.</p>
+
+        <details class="story">
+          <summary>Read my story &rarr;</summary>
+          <p>My first love was broadcast journalism. At 19, I landed my own show at my college radio station. It was called Bear Trap, it played electronic trap music, and my mom tuned in religiously. It was my first public brand, built before I knew what branding meant.</p>
+          <p>From there: a music blog, Toronto's music scene, an internship at MuchMusic (Canada's MTV), and a pivot into marketing in 2018, once it was clear the media industry had approximately 0.01% job security.</p>
+          <p>I've since worked with brands like Cineplex, Revlon, Boston Pizza and Yoga International, and in 2023 I founded my own agency, Phlare Marketing. In 2025, Ana the Marketeer came to life: my own brand, built to decode marketing and branding strategy so you can actually use it.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PROOF -->
   <section class="proof">
     <div class="wrap">
       <h2>I've been doing this a while. Receipts below.</h2>
@@ -165,7 +219,7 @@
     </div>
   </section>
 
-  <!-- 6. CONTENT -->
+  <!-- 8. CONTENT -->
   <section class="content">
     <div class="wrap">
       <h2>I have thoughts. A lot of them.</h2>
@@ -192,61 +246,6 @@
           <p>Scripts reworked into articles are on the way. The newsletter gets them first.</p>
         </div>
         <a class="btn btn--outline" href="#newsletter">Get them first &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="signup" id="newsletter">
-    <div class="wrap">
-      <h2>Is your brand actually you?</h2>
-      <p class="lead">Grab the free Authentic Branding Checklist. It lands in your inbox when you join the Marketeers Memo, my weekly newsletter breaking down branding through pop culture.</p>
-      <form class="signup-form" action="https://app.kit.com/forms/8576546/subscriptions" method="post">
-        <label class="hp" for="email-main">Email</label>
-        <input id="email-main" type="email" name="email_address" placeholder="Your email" required>
-        <button class="btn" type="submit">Send me the checklist</button>
-      </form>
-      <p class="fineprint">One email a week. Unsubscribe whenever.</p>
-    </div>
-  </section>
-
-  <!-- 7. COURSE -->
-  <section class="course" id="course">
-    <div class="wrap">
-      <div class="course-card">
-        <div>
-          <h2>Want to build the brand yourself?</h2>
-          <p class="lead">A practical course for figuring out who you are, what you stand for, and how to turn that into a brand people remember.</p>
-          <a class="btn" href="https://themarketeers.thinkific.com/products/courses/brand-foundations">Explore the course &rarr;</a>
-        </div>
-        <div class="course-name">
-          Brand Foundations
-          <small>Values. Vision. Voice. Vibe.</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. ABOUT -->
-  <section class="about" id="about">
-    <div class="wrap about-grid">
-      <div class="face-wrap">
-        <!-- PHOTO: save a second, more "you" photo as ana-about.jpg next to index.html. -->
-        <div class="face">
-          <span>A photo that looks like you, not LinkedIn you</span>
-          <img src="ana-about.jpg" alt="Ana, smiling and relaxed" onerror="this.remove()">
-        </div>
-      </div>
-      <div>
-        <h2>Hi, I'm Ana. I'm obsessed with why people care about things.</h2>
-        <p class="lead">Marketing, culture and storytelling have been the same obsession since I was 19. I want to know why one brand becomes a cult favourite and another gets scrolled past.</p>
-
-        <details class="story">
-          <summary>Read my story &rarr;</summary>
-          <p>My first love was broadcast journalism. At 19, I landed my own show at my college radio station. It was called Bear Trap, it played electronic trap music, and my mom tuned in religiously. It was my first public brand, built before I knew what branding meant.</p>
-          <p>From there: a music blog, Toronto's music scene, an internship at MuchMusic (Canada's MTV), and a pivot into marketing in 2018, once it was clear the media industry had approximately 0.01% job security.</p>
-          <p>I've since worked with brands like Cineplex, Revlon, Boston Pizza and Yoga International, and in 2023 I founded my own agency, Phlare Marketing. In 2025, Ana the Marketeer came to life: my own brand, built to decode marketing and branding strategy so you can actually use it.</p>
-        </details>
       </div>
     </div>
   </section>
