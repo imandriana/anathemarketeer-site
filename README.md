@@ -3,7 +3,8 @@
 Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage (order: hero, newsletter opt-in, yellow ticker, How can I help you, course feature, Hi I am Ana with receipts, client logos and testimonials in one section, most popular videos, final CTA)
+- `index.html` — homepage (order: hero, newsletter opt-in, yellow ticker, brands I've worked with, How can I help you, course, Hi I am Ana with receipts and testimonials, My process, most popular videos, final CTA)
+- `audit.html` — free brand audit page (Google Form embedded; edit questions in Google Forms and it updates here)
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
 - `script.js` — newsletter pop-up (desktop only; shows once after 30s or 55% scroll, then stays away for 14 days)
@@ -13,9 +14,10 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 - `contact.html`: replace `REPLACE-ME-FORM-ID` with a Formspree form ID, or switch the contact page to the booking form only.
 - The About section reuses `ana-hero.jpg`. To use a second photo, add it (e.g. `ana-about.jpg`) and change the `src` in the About section of `index.html`.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
-- Client logo carousel: upload logos (PNG, transparent background) to the top level of the repo with these exact names. Until a file exists, the client name shows as text.
+- Client logo band (static, shown white on dark): upload logos (PNG, transparent background) to the top level of the repo with these exact names. Until a file exists, the client name shows as text.
   `client-classroom-champions.png`, `client-csec.png`, `client-miya-creative-care.png`, `client-stay-at-home-music.png`, `client-cineplex.png`, `client-revlon.png`, `client-boston-pizza.png`, `client-yoga-international.png`
-- To remove a client from the carousel, delete its `<li>` in both lists (the second list is a hidden duplicate that makes the scroll loop).
+- To remove a client, delete its `<li>` in the brands section.
+- Most popular videos: swap the YouTube IDs in the `#videos` section (1 featured + 3 below) for your real top videos.
 - Keep the stats (13K+ subscribers, etc.) accurate as they change.
 
 ## Already connected
