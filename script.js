@@ -1,4 +1,4 @@
-// Newsletter pop-up: opens once per visitor after 30s or 55% scroll, whichever comes first.
+// Newsletter pop-up (desktop only): opens once per visitor after 30s or 55% scroll, whichever comes first.
 // Never shows again after it's closed or after someone signs up (remembered for 14 days).
 (function () {
   var popup = document.getElementById("popup");
@@ -16,6 +16,9 @@
   function remember() {
     try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
   }
+
+  // Desktop only: the opt-in strip under the hero already covers phones, and Google penalizes intrusive mobile pop-ups.
+  if (window.matchMedia("(max-width: 800px)").matches) return;
 
   if (seenRecently()) return;
 
