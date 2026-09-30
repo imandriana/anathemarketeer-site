@@ -1,36 +1,33 @@
 # Ana the Marketeer site
 
-Static site (HTML/CSS/JS) for GitHub Pages. No build step.
+Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage
+- `index.html` — homepage (nine sections: hero, YouTube, offers, funnel philosophy, proof, content, newsletter, course, about, final CTA)
 - `contact.html` — contact page
-- `styles.css`, `script.js` — shared styling and the newsletter pop-up
+- `styles.css` — all styling (brand palette and fonts are defined at the top)
+- `script.js` — newsletter pop-up (shows once after 30s or 55% scroll, then stays away for 14 days)
 
-## Placeholders to replace before launch
-Search each file for `REPLACE-ME` and swap in the real value:
+## Still to do
+- `contact.html`: replace `REPLACE-ME-FORM-ID` with a Formspree form ID, or switch the contact page to the booking form only.
+- Add photos at the top level of the repo: `ana-hero.jpg` (portrait crop) and `ana-about.jpg`. Until they exist, placeholder frames show.
+- Add real client testimonials in the commented spot in the proof section of `index.html`.
+- Keep the stats (13K+ subscribers, etc.) accurate as they change.
 
-| Placeholder | What goes there |
-|---|---|
-| `REPLACE-ME-THINKIFIC-URL` | Branding Foundations course link |
-| `REPLACE-ME-BOOKING-URL` | Your booking page (Calendly, Cal.com, etc.) |
-| `REPLACE-ME-KIT-FORM-ID` | Kit form ID (Kit → Grow → Landing Pages & Forms → your form → the number in the form's embed code) |
-| `REPLACE-ME-FORM-ID` | Formspree form ID for the contact form |
-| `REPLACE-ME-CHANNEL` / `REPLACE-ME-HANDLE` | YouTube and Instagram handles |
+## Already connected
+- Course: Thinkific Brand Foundations link
+- Booking: Google Form
+- Newsletter: Kit form `8576546` (both the on-page form and the pop-up)
+- YouTube and Instagram links
 
-Also: add a headshot (`ana.jpg`) and update the proof strip numbers on the homepage.
+## Custom domain (anathemarketeer.com)
+Do not add a `CNAME` file until DNS is set up, or the `github.io` address stops working.
 
-## Kit setup
-In Kit, create one form and add an automation: when someone subscribes to that form, send the Authentic Branding Checklist.
-
-## Publish
-1. Create a public GitHub repo and upload these files at the top level.
-2. Settings → Pages → Deploy from a branch → `main` / root.
-3. Upload the `CNAME` file too (it already contains `anathemarketeer.com`). Then enter the domain in Settings → Pages.
-4. At IONOS (Domains → your domain → DNS), add:
+1. At IONOS (Domains → your domain → DNS), add:
    - Four `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - One `CNAME` record for `www` pointing to `YOUR-GITHUB-USERNAME.github.io`
-   - Delete any existing `A` or `AAAA` records for `@` that IONOS added by default (they point to IONOS parking pages).
-5. Back in Settings → Pages, tick "Enforce HTTPS" once it becomes available (can take up to 24 hours).
+   - One `CNAME` record for `www` pointing to `imandriana.github.io`
+   - Delete any default `A` or `AAAA` records for `@` that IONOS added (they point to parking pages).
+2. In GitHub: Settings → Pages → Custom domain → enter `anathemarketeer.com` and save.
+3. Tick "Enforce HTTPS" once it becomes available (can take up to 24 hours).
 
 Check GitHub's current Pages docs if any of those IPs have changed.
