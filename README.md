@@ -3,7 +3,7 @@
 Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage (order: hero, compact newsletter opt-in, ticker, YouTube, ways to work, course, funnel philosophy, about, proof, content, final CTA)
+- `index.html` — homepage (order: hero, compact newsletter opt-in, ticker, ways to work, course, funnel philosophy, about, proof with client logo carousel, YouTube, final CTA)
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
 - `script.js` — newsletter pop-up (shows once after 30s or 55% scroll, then stays away for 14 days)
@@ -13,6 +13,9 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 - `contact.html`: replace `REPLACE-ME-FORM-ID` with a Formspree form ID, or switch the contact page to the booking form only.
 - The About section reuses `ana-hero.jpg`. To use a second photo, add it (e.g. `ana-about.jpg`) and change the `src` in the About section of `index.html`.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
+- Client logo carousel: upload logos (PNG, transparent background) to the top level of the repo with these exact names. Until a file exists, the client name shows as text.
+  `client-classroom-champions.png`, `client-csec.png`, `client-miya-creative-care.png`, `client-stay-at-home-music.png`, `client-cineplex.png`, `client-revlon.png`, `client-boston-pizza.png`, `client-yoga-international.png`
+- To remove a client from the carousel, delete its `<li>` in both lists (the second list is a hidden duplicate that makes the scroll loop).
 - Keep the stats (13K+ subscribers, etc.) accurate as they change.
 
 ## Already connected
