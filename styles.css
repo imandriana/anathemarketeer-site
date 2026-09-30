@@ -229,7 +229,7 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 /* ---------- 2. YouTube ---------- */
 .yt { background: var(--paper); }
 .yt-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
-.yt h2 { max-width: 10ch; }
+.yt h2 { max-width: none; font-size: clamp(2rem, 4vw, 3.4rem); }
 .yt .video-grid { margin: 3rem 0 0; }
 @media (max-width: 900px) { .yt-grid { grid-template-columns: 1fr; } .yt h2 { max-width: none; } }
 
@@ -652,3 +652,5 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .audit-embed iframe { display: block; width: 100%; height: 1900px; border: 0; }
 .audit-fallback { max-width: 760px; margin: 1.4rem auto 0; font-size: 0.95rem; }
 @media (max-width: 700px) { .audit-embed iframe { height: 2500px; } }
+
+.process-cta { text-align: center; margin: 0 auto; max-width: none; }
