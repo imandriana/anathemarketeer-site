@@ -57,7 +57,7 @@ h3 { font-size: 1.6rem; font-weight: 800; }
 p { margin: 0 0 1em; max-width: 60ch; }
 .lead { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
-section { padding: clamp(64px, 9vw, 120px) 0; }
+section { padding: clamp(44px, 6vw, 80px) 0; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -228,14 +228,10 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 
 /* ---------- 2. YouTube ---------- */
 .yt { background: var(--paper); }
-.yt-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
-}
-.yt h2 { max-width: 10ch; }
-.yt .video-grid { margin-top: 3rem; margin-bottom: 0; }
+.yt-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px 32px; margin-bottom: 2rem; }
+.yt-head h2 { margin-bottom: 0.2em; }
+.yt-head p { margin: 0; }
+.yt .video-grid { margin: 0; }
 
 .video {
   display: block;
@@ -266,7 +262,6 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 }
 .video-title { padding: 16px 20px 18px; color: var(--white); font-weight: 600; line-height: 1.35; }
 
-@media (max-width: 900px) { .yt-grid { grid-template-columns: 1fr; } .yt h2 { max-width: none; } }
 
 /* ---------- 3. What I do ---------- */
 .work { background: var(--azure); color: var(--white); }
@@ -285,7 +280,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   padding: 34px 30px 32px;
   border: 3px solid var(--azure-deep);
   box-shadow: 8px 8px 0 var(--azure-deep);
-  min-height: 380px;
+  min-height: 270px;
 }
 .card .icon { font-size: 2.4rem; line-height: 1; margin-bottom: 1.2rem; }
 .card h3 { font-size: clamp(1.8rem, 3vw, 2.3rem); text-transform: uppercase; letter-spacing: 0; }
@@ -304,72 +299,24 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   .card { min-height: 0; transform: none !important; }
 }
 
-/* ---------- 4. Philosophy ---------- */
-.philosophy { background: var(--azure-deep); color: var(--white); overflow: hidden; }
-.statement {
-  font-family: var(--display);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 0.98;
-  letter-spacing: -0.01em;
-  font-size: clamp(2.8rem, 8.6vw, 7.4rem);
-  margin: 0 0 0.5em;
-}
-.statement .second { display: block; color: var(--yellow); }
-.philosophy-body { max-width: 62ch; font-size: 1.15rem; color: rgba(255, 255, 255, 0.9); }
-
-.chain {
-  list-style: none;
-  padding: 0;
-  margin: 3.2rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-.chain li {
-  position: relative;
-  font-family: var(--head);
-  font-weight: 800;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  text-transform: uppercase;
-  text-align: center;
-  padding: 26px 12px;
-  background: var(--yellow);
-  color: var(--azure);
-  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%, 22px 50%);
-  margin-right: -12px;
-}
-.chain li:first-child { clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); }
-.chain li:nth-child(2) { background: #f0bf00; }
-.chain li:nth-child(3) { background: #ffd93d; }
-.chain li:nth-child(4) { background: var(--white); margin-right: 0; }
-
-@media (max-width: 700px) {
-  .chain { grid-template-columns: 1fr; gap: 10px; }
-  .chain li,
-  .chain li:first-child { clip-path: none; margin-right: 0; border-radius: 12px; }
-}
-
 /* ---------- 5. Proof ---------- */
-.proof { background: var(--white); }
-.proof h2 { max-width: 16ch; }
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
-  margin: 2.6rem 0 3rem;
+  margin: 1.4rem 0 0;
 }
 .stat {
   border: 3px solid var(--azure);
   border-radius: var(--radius);
-  padding: 26px 22px;
-  background: var(--paper);
+  padding: 18px 20px;
+  background: var(--white);
 }
 .stat b {
   display: block;
   font-family: var(--head);
   font-weight: 800;
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.1rem, 3.6vw, 3rem);
   line-height: 1;
   color: var(--azure);
   margin-bottom: 8px;
@@ -379,9 +326,8 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 
 
 /* Client logo carousel */
-.logos { overflow: hidden; background: var(--white); padding: 4px 0 18px; }
-.logo-strip { background: var(--white); padding: 18px 0 0; }
-.strip-label { margin: 0 0 4px; text-align: center; max-width: none; font-size: 0.85rem; font-weight: 600; color: var(--azure); }
+.logos { overflow: hidden; padding: 6px 0 4px; }
+.strip-label { margin: 2rem 0 4px; max-width: none; font-size: 0.9rem; font-weight: 600; color: var(--azure); }
 .logo-track { display: flex; width: max-content; animation: slide 40s linear infinite; }
 .logos:hover .logo-track { animation-play-state: paused; }
 .logo-track ul {
@@ -520,7 +466,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   background: var(--yellow);
   color: var(--azure);
   text-align: left;
-  padding: clamp(72px, 10vw, 140px) 0;
+  padding: clamp(56px, 8vw, 100px) 0;
 }
 .cta-final h2 {
   font-family: var(--display);
@@ -638,3 +584,11 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 .quote--white { background: var(--white); color: var(--ink); }
 .quote--azure { background: var(--azure); color: var(--white); box-shadow: 6px 6px 0 var(--yellow); }
 @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+
+/* ---------- About: links and receipts ---------- */
+.about-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 1.6rem; }
+.receipts { margin-top: clamp(40px, 6vw, 72px); }
+.receipts h3 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); margin: 0 0 0.3em; }
+.receipts .quotes { margin-top: 2rem; }
+.about .about-grid { align-items: start; }
+@media (max-width: 480px) { .about-links .btn { width: 100%; text-align: center; } }

@@ -3,7 +3,7 @@
 Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage (order: hero, client logo carousel, compact newsletter opt-in, ticker, ways to work, course, funnel philosophy, about, proof with testimonials, YouTube, final CTA)
+- `index.html` — homepage (order: hero, newsletter opt-in, yellow ticker, How can I help you, course feature, Hi I am Ana with receipts, client logos and testimonials in one section, most popular videos, final CTA)
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
 - `script.js` — newsletter pop-up (desktop only; shows once after 30s or 55% scroll, then stays away for 14 days)
