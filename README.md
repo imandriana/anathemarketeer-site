@@ -12,7 +12,7 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 - `logo.png`, `ana-hero.jpg`, `course-header.jpg` — images used on the site
 
 ## Still to do
-- The About section reuses `ana-hero.jpg`. To use a second photo, add it (e.g. `ana-about.jpg`) and change the `src` in the About section of `index.html`.
+- Photos: `ana-hero.jpg` (hero) and `ana-about.jpg` (About). Replace the files, keeping the names, to swap them.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
 - Client logo band (static, shown white on dark): upload logos (PNG, transparent background) to the top level of the repo with these exact names. Until a file exists, the client name shows as text.
   `client-classroom-champions.png`, `client-csec.png`, `client-miya-creative-care.png`, `client-stay-at-home-music.png`, `client-cineplex.png`, `client-revlon.png`, `client-boston-pizza.png`, `client-yoga-international.png`

@@ -705,3 +705,5 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .form-success:focus { outline: none; }
 .band .form-success { max-width: 660px; }
 [hidden] { display: none !important; }
+.about .face { aspect-ratio: 4 / 5; }
+.about .face img { object-position: center 30%; }
