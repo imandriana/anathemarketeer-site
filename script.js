@@ -1,4 +1,4 @@
-// Newsletter pop-up (desktop only): opens once per visitor after 30s or 55% scroll, whichever comes first.
+// Newsletter pop-up: the top banner opens it any time; it also auto-opens (desktop only) once per visitor after 30s or 55% scroll, whichever comes first.
 // Never shows again after it's closed or after someone signs up (remembered for 14 days).
 (function () {
   var popup = document.getElementById("popup");
@@ -17,16 +17,10 @@
     try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
   }
 
-  // Desktop only: the opt-in strip under the hero already covers phones, and Google penalizes intrusive mobile pop-ups.
-  if (window.matchMedia("(max-width: 800px)").matches) return;
-
-  if (seenRecently()) return;
-
   var lastFocus = null;
   var shown = false;
 
   function open() {
-    if (shown) return;
     shown = true;
     lastFocus = document.activeElement;
     popup.classList.add("is-open");
@@ -42,15 +36,24 @@
     if (lastFocus) lastFocus.focus();
   }
 
-  var timer = setTimeout(open, 30000);
-  window.addEventListener("scroll", function onScroll() {
-    var scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (scrolled > 0.55) {
-      clearTimeout(timer);
-      open();
-      window.removeEventListener("scroll", onScroll);
-    }
-  }, { passive: true });
+  // The top banner always opens the pop-up, on any screen size.
+  Array.prototype.forEach.call(document.querySelectorAll("[data-open-popup]"), function (b) {
+    b.addEventListener("click", open);
+  });
+
+  // Auto-open: desktop only (Google penalizes intrusive mobile pop-ups), once per visitor.
+  if (!window.matchMedia("(max-width: 800px)").matches && !seenRecently()) {
+    var auto = function () { if (!shown) open(); };
+    var timer = setTimeout(auto, 30000);
+    window.addEventListener("scroll", function onScroll() {
+      var scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (scrolled > 0.55) {
+        clearTimeout(timer);
+        auto();
+        window.removeEventListener("scroll", onScroll);
+      }
+    }, { passive: true });
+  }
 
   popup.addEventListener("click", function (e) {
     if (e.target === popup || e.target.hasAttribute("data-close")) close();

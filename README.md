@@ -3,7 +3,7 @@
 Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
-- `index.html` — homepage (order: hero, yellow ticker, newsletter opt-in, brands I've worked with, How can I help you, course, Hi I am Ana with receipts and testimonials, My process, most popular videos, final CTA)
+- `index.html` — homepage (order: hero, yellow scroll, brands, How can I help you, About + receipts + testimonials, How we'll work together, course, most popular videos, final CTA). The free checklist lives in the top banner and the pop-up (Kit form 8576546).
 - `audit.html` — free brand audit page (Google Form embedded; edit questions in Google Forms and it updates here)
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
