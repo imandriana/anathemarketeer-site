@@ -4,14 +4,14 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Files
 - `index.html` — homepage (order: hero, yellow scroll, brands, How can I help you, About + receipts + testimonials, How we'll work together, course, most popular videos, final CTA). The free checklist lives in the top banner and the pop-up (Kit form 8576546).
-- `audit.html` — free brand audit page (Google Form embedded; edit questions in Google Forms and it updates here)
+- `audit.html` — free brand audit page (short branded form, sends to Formspree `xaenzzyp`; edit the fields in this file and in the Formspree dashboard)
+- `form.js` — sends the audit and contact forms without leaving the page
 - `contact.html` — contact page
 - `styles.css` — all styling (brand palette and fonts are defined at the top)
 - `script.js` — newsletter pop-up (desktop only; shows once after 30s or 55% scroll, then stays away for 14 days)
 - `logo.png`, `ana-hero.jpg`, `course-header.jpg` — images used on the site
 
 ## Still to do
-- `contact.html`: replace `REPLACE-ME-FORM-ID` with a Formspree form ID, or switch the contact page to the booking form only.
 - The About section reuses `ana-hero.jpg`. To use a second photo, add it (e.g. `ana-about.jpg`) and change the `src` in the About section of `index.html`.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
 - Client logo band (static, shown white on dark): upload logos (PNG, transparent background) to the top level of the repo with these exact names. Until a file exists, the client name shows as text.
@@ -22,7 +22,7 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 
 ## Already connected
 - Course: Thinkific Branding Foundations link
-- Booking: Google Form
+- Forms: Formspree `xaenzzyp` (audit and contact pages)
 - Newsletter: Kit form `8576546` (both the on-page form and the pop-up)
 - YouTube and Instagram links
 

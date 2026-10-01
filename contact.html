@@ -62,8 +62,7 @@
         <p class="lead">I read everything and reply within a few business days.</p>
       </div>
 
-      <!-- Replace REPLACE-ME-FORM-ID with your Formspree form ID (free at formspree.io) -->
-      <form class="contact-form" action="https://formspree.io/f/REPLACE-ME-FORM-ID" method="post" target="_blank">
+            <form class="contact-form" action="https://formspree.io/f/xaenzzyp" method="post" id="contact-form">
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required autocomplete="name">
@@ -87,9 +86,15 @@
           <label for="msg">Tell me about your brand and what you need help with</label>
           <textarea id="msg" name="message" required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="New message from the website">
         <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div><button class="btn btn--dark" type="submit">Send message</button></div>
+        <p class="form-error" id="contact-error" role="alert" hidden>Something went wrong. Please try again.</p>
       </form>
+      <div class="form-success" id="contact-success" role="status" tabindex="-1" hidden>
+        <h2>Message sent. Thank you!</h2>
+        <p>I read everything and reply within a few business days.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -105,6 +110,7 @@
   </div>
 </footer>
 
+<script src="form.js"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
   // Pre-select the topic when arriving from a card on the homepage

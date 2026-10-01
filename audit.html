@@ -30,20 +30,71 @@
   <section class="page-hero">
     <div class="wrap">
       <h1>Get your free brand audit.</h1>
-      <p>Fill out the form below. I'll review it, then get in touch to book a free 15-minute discovery call, where we talk through where you are and how we could work together.</p>
+      <p>Seven quick questions. I&rsquo;ll review your answers, then get in touch to book a free 15-minute discovery call, where we talk through where you are and how we could work together.</p>
     </div>
   </section>
 
   <section class="audit">
     <div class="wrap">
-      <div class="audit-embed">
-        <!-- Responses go straight to your Google Form. Edit the questions in Google Forms and this page updates by itself. -->
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdOrKXsU8K7JtIJAFMZO_SH9Jf5i1UbGmYV7R2LrwHs5Z0cFw/viewform?embedded=true"
-          title="Free brand audit form"
-          loading="lazy">Loading the form&hellip;</iframe>
+      <div class="audit-card">
+        <p class="audit-note">I personally review every audit request and will be in touch to book your free 15-minute discovery call.</p>
+
+        <form class="contact-form audit-form" id="audit-form" action="https://formspree.io/f/xaenzzyp" method="post">
+          <input type="hidden" name="_subject" value="New free brand audit request">
+          <div class="field">
+            <label for="a-name">Your name</label>
+            <input id="a-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="a-email">Email</label>
+            <input id="a-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="a-brand">Brand or business name <span class="opt">(optional)</span></label>
+            <input id="a-brand" name="brand" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="a-link">Website or main social link</label>
+            <input id="a-link" name="link" type="text" required placeholder="yourbrand.com or @yourbrand">
+          </div>
+          <div class="field">
+            <label for="a-role">I&rsquo;m a&hellip; <span class="opt">(optional)</span></label>
+            <select id="a-role" name="role">
+              <option value="">Choose one</option>
+              <option>Artist or visual creative</option>
+              <option>Musician or performer</option>
+              <option>Personal brand or creator</option>
+              <option>Small business or startup</option>
+              <option>Nonprofit</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="a-challenge">What&rsquo;s your biggest brand or marketing challenge right now?</label>
+            <textarea id="a-challenge" name="challenge" required></textarea>
+          </div>
+          <div class="field">
+            <label for="a-budget">Budget range</label>
+            <select id="a-budget" name="budget" required>
+              <option value="">Choose one</option>
+              <option>Under $500</option>
+              <option>$500&ndash;$1,500</option>
+              <option>$1,500&ndash;$5,000</option>
+              <option>$5,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div><button class="btn btn--dark" type="submit">Send my audit request &rarr;</button></div>
+          <p class="form-error" id="audit-error" role="alert" hidden>Something went wrong. Please try again, or email me directly.</p>
+        </form>
+
+        <div class="form-success" id="audit-success" role="status" tabindex="-1" hidden>
+          <h2>Got it. Thank you!</h2>
+          <p>I&rsquo;ll review your answers and get in touch to book your free 15-minute discovery call.</p>
+          <p><a class="btn" href="index.html">Back to the homepage</a></p>
+        </div>
       </div>
-      <p class="audit-fallback">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOrKXsU8K7JtIJAFMZO_SH9Jf5i1UbGmYV7R2LrwHs5Z0cFw/viewform?usp=header" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
     </div>
   </section>
 </main>
@@ -60,6 +111,7 @@
   </div>
 </footer>
 
+<script src="form.js"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
