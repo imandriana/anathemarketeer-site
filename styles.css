@@ -785,3 +785,11 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
   .site-footer a, .cookie-link { margin: 0; }
   .cookie-link { margin: 0; }
 }
+
+/* ---------- Calendly on phones: use the full screen width (Calendly needs ~320px) ---------- */
+@media (max-width: 700px) {
+  .audit-card:has(.form-success:not([hidden])) { padding-inline: 16px; box-shadow: none; border-inline: 0; border-radius: 0; background: transparent; }
+  .audit .wrap:has(.form-success:not([hidden])) { width: 100%; }
+  .form-success:not([hidden]) > h2, .form-success:not([hidden]) > p { padding-inline: 4px; }
+  .calendly { margin-inline: -16px; border-radius: 0; border-inline: 0; }
+}
