@@ -43,6 +43,7 @@
       });
     });
   }
+  wire("apply-form", "apply-success", "apply-error", "apply_intensive_submit");
   wire("audit-form", "audit-success", "audit-error", "generate_lead");
   wire("contact-form", "contact-success", "contact-error", "contact_form_submit");
 })();

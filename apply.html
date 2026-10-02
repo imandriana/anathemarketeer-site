@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Ana the Marketeer</title>
-  <meta name="description" content="Get in touch with Ana the Marketeer about 1:1 consulting, creative strategy, the Branding Foundations course, or collaborations.">
-  <link rel="canonical" href="https://anathemarketeer.com/contact">
+  <title>Apply for the Creative Strategy Intensive | Ana the Marketeer</title>
+  <meta name="description" content="Apply for the 90-day Creative Strategy Intensive with Ana the Marketeer.">
+  <link rel="canonical" href="https://anathemarketeer.com/apply">
   <meta name="theme-color" content="#043137">
   <meta property="og:site_name" content="Ana the Marketeer">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://anathemarketeer.com/contact">
-  <meta property="og:title" content="Contact Ana the Marketeer">
-  <meta property="og:description" content="Get in touch with Ana the Marketeer about 1:1 consulting, creative strategy, the Branding Foundations course, or collaborations.">
+  <meta property="og:url" content="https://anathemarketeer.com/apply">
+  <meta property="og:title" content="Apply for the Creative Strategy Intensive">
+  <meta property="og:description" content="Apply for the 90-day Creative Strategy Intensive with Ana the Marketeer.">
   <meta property="og:image" content="https://anathemarketeer.com/og-share.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ana the Marketeer laughing on a counter next to the headline: Your brand deserves a strategy, not more random marketing.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Ana the Marketeer">
-  <meta name="twitter:description" content="Get in touch with Ana the Marketeer about 1:1 consulting, creative strategy, the Branding Foundations course, or collaborations.">
+  <meta name="twitter:title" content="Apply for the Creative Strategy Intensive">
+  <meta name="twitter:description" content="Apply for the 90-day Creative Strategy Intensive with Ana the Marketeer.">
   <meta name="twitter:image" content="https://anathemarketeer.com/og-share.jpg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -36,10 +36,10 @@
   <div class="wrap">
     <a class="logo" href="/"><img src="logo.png" alt="Ana the Marketeer logo" width="420" height="242"></a>
     <nav class="nav" aria-label="Main">
-      <a href="/#videos">Watch</a>
       <a href="/#help">Work with me</a>
       <a href="/#course">Course</a>
       <a href="/#about">About</a>
+      <a href="/#videos">Watch</a>
       <a class="btn btn--small" href="/audit">Free brand audit &rarr;</a>
     </nav>
   </div>
@@ -48,74 +48,40 @@
 <main>
   <section class="page-hero">
     <div class="wrap">
-      <h1>Let's talk about your brand.</h1>
-      <p>Pick the route that fits. Not sure which one? Send a message and I'll point you to the right one.</p>
-      <a class="scroll-cue" href="#routes" aria-label="Scroll down to see your options"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 4v15M5 13l7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <h1>Apply for the Intensive.</h1>
+      <p>Tell me about what you&rsquo;re building. I read every application personally and reply to set up a call if it looks like a fit.</p>
+      <a class="scroll-cue" href="#start" aria-label="Scroll down to the application form"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 4v15M5 13l7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </section>
 
-  <section id="routes">
+  <section class="audit" id="start">
     <div class="wrap">
-      <div class="routes">
-        <div class="route">
-          <h3>Free brand audit</h3>
-          <p>The best first step for 1:1 consulting or creative strategy. Fill out the form, then pick a time for a free 15-minute discovery call.</p>
-          <a class="btn btn--dark" href="/audit">Start the audit &rarr;</a>
+      <div class="audit-card">
+        <p class="audit-note">The Creative Strategy Intensive is 90 days, 6 strategy sessions and between-session action items, for $2,000 USD. Not ready to commit yet? <a href="/audit">Start with a free brand audit</a> instead.</p>
+        <form class="contact-form audit-form" id="apply-form" action="https://formspree.io/f/xaenzzyp" method="post">
+          <input type="hidden" name="_subject" value="New Creative Strategy Intensive application">
+          <div class="field"><label for="p-name">Your name</label><input id="p-name" name="name" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="p-link">Website or main social link</label><input id="p-link" name="link" type="text" required placeholder="yourbrand.com or @yourbrand"></div>
+          <div class="field"><label for="p-role">I&rsquo;m a&hellip;</label>
+            <select id="p-role" name="role" required><option value="">Choose one</option><option>Musician</option><option>Artist or visual creative</option><option>Creator</option><option>Founder or entrepreneur</option><option>Creative small business</option><option>Other</option></select></div>
+          <div class="field"><label for="p-building">What are you building?</label><textarea id="p-building" name="building" required></textarea></div>
+          <div class="field"><label for="p-goal">What do you want to walk away with after 90 days?</label><textarea id="p-goal" name="goal" required></textarea></div>
+          <div class="field"><label for="p-commit">Are you ready to commit 90 days to this?</label>
+            <select id="p-commit" name="commitment" required><option value="">Choose one</option><option>Yes. I&rsquo;m ready to commit to 6 sessions and the work in between</option><option>Almost. I have a few questions first</option><option>Not sure yet</option></select></div>
+          <div class="field"><label for="p-pay">Which payment option suits you?</label>
+            <select id="p-pay" name="payment_preference" required><option value="">Choose one</option><option>Pay in full: $2,000</option><option>3 monthly payments: 3 &times; $700</option><option>Not sure yet</option></select></div>
+          <div class="field"><label for="p-source">How did you hear about me? <span class="opt">(optional)</span></label>
+            <select id="p-source" name="heard_about_me"><option value="">Choose one</option><option>YouTube</option><option>Instagram</option><option>TikTok</option><option>A friend or referral</option><option>Branding Foundations course</option><option>Google search</option><option>Phlare Marketing</option><option>Other</option></select></div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div><button class="btn btn--dark" type="submit">Send my application &rarr;</button></div>
+          <p class="form-legal">By submitting, you agree that I may use your details to review your application and contact you about it. See the <a href="/privacy">privacy policy</a>.</p>
+          <p class="form-error" id="apply-error" role="alert" hidden>Something went wrong. Please try again, or email me directly.</p>
+        </form>
+        <div class="form-success" id="apply-success" role="status" tabindex="-1" hidden>
+          <h2>Application received. Thank you!</h2>
+          <p>I read every application personally and will reply by email about next steps. If you&rsquo;d like to talk sooner, you can also <a href="/audit">book a free discovery call</a>.</p>
         </div>
-        <div class="route">
-          <h3>Creative strategy</h3>
-          <p>Need help organizing your content strategy? Tell me about your brand and where your content is stuck.</p>
-          <a class="btn btn--outline" href="#message">Send a message &rarr;</a>
-        </div>
-        <div class="route">
-          <h3>SEO, email and growth</h3>
-          <p>Marketing for businesses and nonprofits lives at my agency, Phlare Marketing.</p>
-          <a class="btn btn--outline" href="https://phlare.ca" target="_blank" rel="noopener noreferrer">Visit phlare.ca &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="message" class="band">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Send a message</h2>
-        <p class="lead">I read everything and reply within a few business days.</p>
-      </div>
-
-            <form class="contact-form" action="https://formspree.io/f/xaenzzyp" method="post" id="contact-form">
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required autocomplete="name">
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="email">
-        </div>
-        <div class="field">
-          <label for="topic">What's this about?</label>
-          <select id="topic" name="topic">
-            <option value="session">1:1 consulting</option>
-            <option value="audit">Free brand audit</option>
-            <option value="content">Creative strategy</option>
-            <option value="course">Branding Foundations course question</option>
-            <option value="collab">Collaboration or press</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="msg">Tell me about your brand and what you need help with</label>
-          <textarea id="msg" name="message" required></textarea>
-        </div>
-        <input type="hidden" name="_subject" value="New message from the website">
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div><button class="btn btn--dark" type="submit">Send message</button></div>
-        <p class="form-legal">By sending this, you agree that I may use your details to reply to you. See the <a href="/privacy">privacy policy</a>.</p>
-        <p class="form-error" id="contact-error" role="alert" hidden>Something went wrong. Please try again.</p>
-      </form>
-      <div class="form-success" id="contact-success" role="status" tabindex="-1" hidden>
-        <h2>Message sent. Thank you!</h2>
-        <p>I read everything and reply within a few business days.</p>
       </div>
     </div>
   </section>
@@ -132,17 +98,13 @@
       </div>
       <a href="https://phlare.ca" target="_blank" rel="noopener noreferrer">Phlare Marketing</a>
       <a href="/privacy">Privacy</a>
+      <a href="/contact">Contact</a>
     </div>
   </div>
 </footer>
 
 <script src="form.js?v=20261002n"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  // Pre-select the topic when arriving from a card on the homepage
-  var t = new URLSearchParams(location.search).get("topic");
-  if (t) { var s = document.getElementById("topic"); if (s) s.value = t; }
-</script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <script src="/analytics.js?v=20261002n"></script>
 </body>
 </html>

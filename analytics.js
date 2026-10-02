@@ -89,6 +89,7 @@
     var href = a.getAttribute && a.getAttribute("href");
     if (a.hasAttribute("data-open-popup")) window.atmTrack("checklist_banner_click");
     else if (href === "/audit") window.atmTrack("audit_cta_click", { link_text: (a.textContent || "").trim().slice(0, 60), page_section: section });
+    else if (href === "/apply") window.atmTrack("apply_cta_click", { link_text: (a.textContent || "").trim().slice(0, 60), page_section: section });
     else if (href && href.indexOf("thinkific.com") > -1) window.atmTrack("course_click", { page_section: section });
     else if (a.closest(".social")) window.atmTrack("social_click", { network: (a.getAttribute("aria-label") || "").replace(/^.* on /, "") });
     else if (href && href.indexOf("phlare.ca") > -1) window.atmTrack("phlare_click", { page_section: section });
