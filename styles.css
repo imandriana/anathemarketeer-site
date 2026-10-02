@@ -718,3 +718,4 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .quote-stats span { display: block; margin-top: 0.35em; font-size: 0.74rem; line-height: 1.25; font-weight: 500; opacity: 0.85; }
 .quote-stats { gap: 14px; }
 .quote-stats b { font-size: clamp(1.05rem, 1.45vw, 1.3rem); letter-spacing: -0.01em; white-space: nowrap; }
+.quote-stats .period { grid-column: 1 / -1; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin-bottom: -2px; }
