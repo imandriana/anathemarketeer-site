@@ -98,3 +98,7 @@
 .receipts .stk { top: -34px; }
 @media (max-width: 700px) { .receipts .stk { top: -38px; } .process .stk { top: -26px; } .cta-final .stk { top: -30px; } }
 .dots .stk { left: 31%; bottom: 14px; --r: -5deg; }
+.cs-months .stk { top: -34px; bottom: auto; right: 4px; --r: 5deg; }
+@media (max-width: 700px) { .cs-months .stk { top: -34px; bottom: auto; } }
+.cs-months .stk { top: -56px; }
+@media (max-width: 700px) { .cs-months .stk { top: -40px; } }
