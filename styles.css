@@ -340,7 +340,7 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 
 
 /* Brands I've worked with: static, white logos on dark */
-.brands { background: var(--azure-deep); color: var(--white); padding: 40px 0 44px; text-align: center; }
+.brands { background: var(--azure); color: var(--white); padding: 40px 0 44px; text-align: center; }
 .brands-label {
   margin: 0 auto 26px;
   max-width: none;
@@ -498,7 +498,7 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .cta-final .aside { margin-top: 2rem; font-weight: 600; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--azure-deep); color: rgba(255, 255, 255, 0.85); padding: 44px 0; font-size: 0.95rem; }
+.site-footer { background: var(--azure); color: rgba(255, 255, 255, 0.85); padding: 44px 0; font-size: 0.95rem; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; }
 .site-footer a { text-decoration: none; margin-right: 18px; }
 .site-footer a:hover { color: var(--yellow); }
