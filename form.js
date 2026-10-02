@@ -1,7 +1,7 @@
 // Sends forms to Formspree without leaving the page, then shows a thank-you message.
 // If JavaScript fails for any reason, the form still posts normally to Formspree.
 (function () {
-  function wire(formId, successId, errorId) {
+  function wire(formId, successId, errorId, eventName) {
     var form = document.getElementById(formId);
     if (!form) return;
     var success = document.getElementById(successId);
@@ -21,6 +21,11 @@
       }).then(function (res) {
         if (!res.ok) throw new Error("Request failed");
         form.hidden = true;
+        if (window.atmTrack) {
+          var val = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el && el.value ? el.value : undefined; };
+          if (eventName === "generate_lead") window.atmTrack("generate_lead", { form_name: "free_brand_audit", lead_source: val("heard_about_me"), budget_range: val("budget"), audience: val("role") });
+          else window.atmTrack(eventName, { form_name: formId });
+        }
         var frame = document.getElementById("calendly-frame");
         if (frame && frame.getAttribute("data-src")) {
           var q = new URLSearchParams({ embed_domain: location.hostname || "anathemarketeer.com", embed_type: "Inline", hide_gdpr_banner: "1" });
@@ -38,6 +43,6 @@
       });
     });
   }
-  wire("audit-form", "audit-success", "audit-error");
-  wire("contact-form", "contact-success", "contact-error");
+  wire("audit-form", "audit-success", "audit-error", "generate_lead");
+  wire("contact-form", "contact-success", "contact-error", "contact_form_submit");
 })();

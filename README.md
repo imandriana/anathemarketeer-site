@@ -38,7 +38,7 @@ Do not add a `CNAME` file until DNS is set up, or the `github.io` address stops 
 Check GitHub's current Pages docs if any of those IPs have changed.
 
 ## If a change doesn't show up
-Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002f` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
+Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002g` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
 
 ## SEO files
 - `sitemap.xml` and `robots.txt` — add a new `<url>` to the sitemap whenever you add a page.
@@ -48,3 +48,6 @@ Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002f` (an
 
 ## Intro video
 `video/intro-720.mp4` (desktop), `video/intro-480.mp4` (phones) and `video/intro-poster.jpg` (still frame) are used by the course section. To swap the video, compress the new one to H.264 MP4 (aim for under 15MB for 720p) and replace those files with the same names. It plays muted when scrolled into view and pauses when scrolled away.
+
+## Analytics (Google Analytics 4, `G-J2CDC7NSRZ`)
+`analytics.js` shows the cookie banner and only loads Google Analytics after a visitor clicks Accept, and only on anathemarketeer.com. Custom events it sends: `audit_cta_click`, `generate_lead` (audit form submitted), `book_call` (Calendly booking made), `contact_form_submit`, `newsletter_signup`, `checklist_banner_click`, `course_click`, `social_click`, `phlare_click`, `youtube_click`. In GA4, mark `generate_lead` and `book_call` as key events.
