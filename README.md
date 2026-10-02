@@ -14,7 +14,7 @@ Static site (HTML/CSS/JS) hosted on GitHub Pages. No build step.
 ## Still to do
 - Photos: `ana-hero.jpg` (hero) and `ana-about.jpg` (About). Replace the files, keeping the names, to swap them.
 - Add real client testimonials in the commented spot in the proof section of `index.html`.
-- Client logo band: logos are `client-*.png` (white on dark; transparent PNGs work best): classroom-champions, csec, miya-creative-care, stay-at-home-music, boston-pizza, yoga-international, purity-woods.
+- Client logo band: logos are `client-*.png` (white on dark; transparent PNGs work best): classroom-champions, calgary-flames-foundation, miya-creative-care, stay-at-home-music, boston-pizza, yoga-international, purity-woods.
 - To remove a client, delete its `<li>` in the brands section.
 - Most popular videos: swap the YouTube IDs in the `#videos` section (1 featured + 3 below) for your real top videos.
 - Keep the stats (13K+ subscribers, etc.) accurate as they change.
