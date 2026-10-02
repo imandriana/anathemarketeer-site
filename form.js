@@ -21,6 +21,14 @@
       }).then(function (res) {
         if (!res.ok) throw new Error("Request failed");
         form.hidden = true;
+        var frame = document.getElementById("calendly-frame");
+        if (frame && frame.getAttribute("data-src")) {
+          var q = new URLSearchParams({ embed_domain: location.hostname || "anathemarketeer.com", embed_type: "Inline", hide_gdpr_banner: "1" });
+          var n = form.querySelector('[name="name"]'), em = form.querySelector('[name="email"]');
+          if (n && n.value) q.set("name", n.value);
+          if (em && em.value) q.set("email", em.value);
+          frame.src = frame.getAttribute("data-src") + "?" + q.toString();
+        }
         var lead = document.querySelector(".audit-note");
         if (lead) lead.hidden = true;
         if (success) { success.hidden = false; success.focus(); window.scrollTo({ top: Math.max(0, success.getBoundingClientRect().top + window.scrollY - 120), behavior: "smooth" }); }

@@ -719,3 +719,18 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .quote-stats { gap: 14px; }
 .quote-stats b { font-size: clamp(1.05rem, 1.45vw, 1.3rem); letter-spacing: -0.01em; white-space: nowrap; }
 .quote-stats .period { grid-column: 1 / -1; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin-bottom: -2px; }
+
+/* ---------- Calendly embed, legal text, privacy page ---------- */
+.calendly { margin: 1.4rem 0 0.6rem; border: 3px solid var(--azure); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+.calendly iframe { display: block; width: 100%; height: 760px; border: 0; }
+@media (max-width: 700px) { .calendly iframe { height: 900px; } }
+.audit-card:has(.form-success:not([hidden])) { max-width: 900px; }
+.form-legal { margin: 0; font-size: 0.8rem; opacity: 0.75; }
+.form-legal a, .fineprint a { text-decoration: underline; }
+.legal { background: var(--white); }
+.prose { max-width: 760px; }
+.prose h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); margin: 2rem 0 0.5rem; max-width: none; }
+.prose ul { padding-left: 1.2rem; margin: 0 0 1em; }
+.prose li { margin-bottom: 0.5em; }
+.prose p { max-width: none; }
+.prose .updated { font-size: 0.9rem; opacity: 0.7; }

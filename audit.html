@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261002d">
+  <link rel="stylesheet" href="styles.css?v=20261002e">
 </head>
 <body>
 
@@ -49,14 +49,14 @@
   <section class="page-hero">
     <div class="wrap">
       <h1>Get your free brand audit.</h1>
-      <p>Seven quick questions. I&rsquo;ll review your answers, then get in touch to book a free 15-minute discovery call, where we talk through where you are and how we could work together.</p>
+      <p>A few quick questions, then you pick a time for your free 15-minute discovery call, where we talk through where you are and how we could work together.</p>
     </div>
   </section>
 
   <section class="audit">
     <div class="wrap">
       <div class="audit-card">
-        <p class="audit-note">I personally review every audit request and will be in touch to book your free 15-minute discovery call.</p>
+        <p class="audit-note">I personally review every audit request before we talk. After you submit, you&rsquo;ll pick a time for your free 15-minute discovery call.</p>
 
         <form class="contact-form audit-form" id="audit-form" action="https://formspree.io/f/xaenzzyp" method="post">
           <input type="hidden" name="_subject" value="New free brand audit request">
@@ -103,15 +103,33 @@
               <option>Not sure yet</option>
             </select>
           </div>
+          <div class="field">
+            <label for="a-source">How did you hear about me? <span class="opt">(optional)</span></label>
+            <select id="a-source" name="heard_about_me">
+              <option value="">Choose one</option>
+              <option>YouTube</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>A friend or referral</option>
+              <option>Branding Foundations course</option>
+              <option>Google search</option>
+              <option>Phlare Marketing</option>
+              <option>Other</option>
+            </select>
+          </div>
           <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div><button class="btn btn--dark" type="submit">Send my audit request &rarr;</button></div>
+          <p class="form-legal">By submitting, you agree that I may use your details to review your audit and contact you about it. See the <a href="/privacy">privacy policy</a>.</p>
           <p class="form-error" id="audit-error" role="alert" hidden>Something went wrong. Please try again, or email me directly.</p>
         </form>
 
         <div class="form-success" id="audit-success" role="status" tabindex="-1" hidden>
-          <h2>Got it. Thank you!</h2>
-          <p>I&rsquo;ll review your answers and get in touch to book your free 15-minute discovery call.</p>
-          <p><a class="btn" href="/">Back to the homepage</a></p>
+          <h2>Got it. Now pick a time.</h2>
+          <p>Thank you! Choose a slot for your free 15-minute discovery call below. I currently take discovery calls on Wednesdays.</p>
+          <div class="calendly" id="calendly-wrap">
+            <iframe id="calendly-frame" title="Book your free 15-minute discovery call" data-src="https://calendly.com/hello-phlare/15-minute-discovery-call-clone" loading="lazy"></iframe>
+          </div>
+          <p class="audit-fallback">Calendar not loading? <a href="https://calendly.com/hello-phlare/15-minute-discovery-call-clone" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
         </div>
       </div>
     </div>
@@ -125,12 +143,13 @@
       <a href="https://www.youtube.com/@AnaTheMarketeer" target="_blank" rel="noopener noreferrer">YouTube</a>
       <a href="https://www.instagram.com/anathemarketeer" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://phlare.ca" target="_blank" rel="noopener noreferrer">Phlare Marketing</a>
+      <a href="/privacy">Privacy</a>
       <a href="/contact">Contact</a>
     </div>
   </div>
 </footer>
 
-<script src="form.js?v=20261002d"></script>
+<script src="form.js?v=20261002e"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
