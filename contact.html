@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261002j">
+  <link rel="stylesheet" href="styles.css?v=20261002k">
 </head>
 <body>
 
@@ -50,10 +50,11 @@
     <div class="wrap">
       <h1>Let's talk about your brand.</h1>
       <p>Pick the route that fits. Not sure which one? Send a message and I'll point you to the right one.</p>
+      <a class="scroll-cue" href="#routes" aria-label="Scroll down to see your options"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 4v15M5 13l7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </section>
 
-  <section>
+  <section id="routes">
     <div class="wrap">
       <div class="routes">
         <div class="route">
@@ -135,13 +136,13 @@
   </div>
 </footer>
 
-<script src="form.js?v=20261002j"></script>
+<script src="form.js?v=20261002k"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
   // Pre-select the topic when arriving from a card on the homepage
   var t = new URLSearchParams(location.search).get("topic");
   if (t) { var s = document.getElementById("topic"); if (s) s.value = t; }
 </script>
-<script src="/analytics.js?v=20261002j"></script>
+<script src="/analytics.js?v=20261002k"></script>
 </body>
 </html>

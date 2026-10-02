@@ -801,3 +801,15 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .sound-btn:hover, .sound-btn:focus-visible { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--azure); outline: none; }
 .sound-btn:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
 @media (max-width: 480px) { .course-card .btn { padding-inline: 1.3em; font-size: 0.9rem; letter-spacing: 0.02em; } }
+
+/* Scroll cue (audit + contact heroes) */
+.scroll-cue {
+  display: inline-grid; place-items: center; width: 60px; height: 60px; margin-top: 28px;
+  background: var(--yellow); color: var(--azure); border: 3px solid var(--white); border-radius: 50%;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.35); animation: cue-bounce 1.6s ease-in-out infinite;
+}
+.scroll-cue:hover { background: var(--white); }
+@keyframes cue-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue { animation: none; } }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
