@@ -88,6 +88,23 @@
   });
   v.addEventListener("play", function () { userPaused = false; });
 
+  // "Tap for sound" button: restarts the video from the beginning with sound on.
+  var soundBtn = document.getElementById("sound-btn");
+  function syncSoundBtn() { if (soundBtn) soundBtn.hidden = !v.muted; }
+  if (soundBtn) {
+    soundBtn.addEventListener("click", function () {
+      load();
+      v.muted = false;
+      v.volume = 1;
+      try { v.currentTime = 0; } catch (e) {}
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+      if (window.atmTrack) window.atmTrack("video_unmute", { video: "course_intro" });
+    });
+    v.addEventListener("volumechange", syncSoundBtn);
+    syncSoundBtn();
+  }
+
   new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) load();

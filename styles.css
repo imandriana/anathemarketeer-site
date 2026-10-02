@@ -793,3 +793,11 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
   .form-success:not([hidden]) > h2, .form-success:not([hidden]) > p { padding-inline: 4px; }
   .calendly { margin-inline: -16px; border-radius: 0; border-inline: 0; }
 }
+
+/* ---------- "Tap for sound" button on the intro video ---------- */
+.course-video { position: relative; }
+.sound-btn { position: absolute; z-index: 2; left: 12px; top: 12px; display: inline-flex; align-items: center; gap: 8px; padding: 0.55em 1em; border-radius: 999px; border: 2px solid var(--azure); background: var(--yellow); color: var(--azure); font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; box-shadow: 3px 3px 0 var(--azure); transition: transform .12s ease, box-shadow .12s ease; }
+.sound-btn[hidden] { display: none; }
+.sound-btn:hover, .sound-btn:focus-visible { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--azure); outline: none; }
+.sound-btn:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+@media (max-width: 480px) { .course-card .btn { padding-inline: 1.3em; font-size: 0.9rem; letter-spacing: 0.02em; } }
