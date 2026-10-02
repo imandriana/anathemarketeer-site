@@ -43,7 +43,7 @@
 .site-footer { --perf: var(--yellow); }
 .cs-problem { --perf: var(--azure); } .cs-months { --perf: var(--azure); } .cs-proof { --perf: var(--paper); }
 .cs-faq { --perf: var(--white); } .cs-invest { --perf: var(--paper); }
-.work::before, .about::before, .process::before, .course::before, .yt::before, .cta-final::before, .site-footer::before,
+.about::before, .process::before, .course::before, .yt::before, .cta-final::before,
 .cs-problem::before, .cs-months::before, .cs-proof::before, .cs-faq::before, .cs-invest::before {
   content: ""; position: absolute; z-index: 3; pointer-events: none; left: 0; right: 0; top: -9px; height: 18px;
   background: radial-gradient(circle at 12px 9px, var(--perf) 6.5px, transparent 7px) 0 0 / 28px 18px repeat-x;
