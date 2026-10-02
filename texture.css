@@ -103,3 +103,7 @@
 .cs-months .stk { top: -56px; }
 @media (max-width: 700px) { .cs-months .stk { top: -40px; } }
 .cta-final .scrawl { padding-bottom: 0; background-size: 100% .18em; background-position: 0 96%; }
+.cta-final:not(.cta-final--center) .scrawl--azure {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'><path d='M2 6 C28 2 58 9 96 5 S156 8 198 3' fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
+  background-size: 100% .16em; background-position: 0 90%;
+}
