@@ -63,3 +63,51 @@
   });
   popup.querySelector("form").addEventListener("submit", remember);
 })();
+
+
+// Course intro video: loads when it nears the screen, plays muted when mostly visible, pauses when scrolled away.
+// Viewers can unmute with the player controls. If someone pauses it themselves, it stays paused.
+(function () {
+  var v = document.getElementById("intro-video");
+  if (!v || !("IntersectionObserver" in window)) return;
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var loaded = false, userPaused = false, scriptPause = false;
+
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    var small = window.matchMedia("(max-width: 700px)").matches;
+    v.src = v.getAttribute(small ? "data-src-480" : "data-src-720");
+    v.preload = "metadata";
+  }
+
+  v.addEventListener("pause", function () {
+    if (!scriptPause && !v.ended) userPaused = true;
+    scriptPause = false;
+  });
+  v.addEventListener("play", function () { userPaused = false; });
+
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) load();
+    });
+  }, { rootMargin: "400px" }).observe(v);
+
+  if (reduced) return; // poster + play button only
+
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+        load();
+        if (!userPaused && v.paused && !v.ended) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        }
+      } else if (!v.paused) {
+        scriptPause = true;
+        v.pause();
+      }
+    });
+  }, { threshold: [0, 0.5] }).observe(v);
+})();

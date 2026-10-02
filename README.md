@@ -38,10 +38,13 @@ Do not add a `CNAME` file until DNS is set up, or the `github.io` address stops 
 Check GitHub's current Pages docs if any of those IPs have changed.
 
 ## If a change doesn't show up
-Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002e` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
+Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002f` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
 
 ## SEO files
 - `sitemap.xml` and `robots.txt` — add a new `<url>` to the sitemap whenever you add a page.
 - `og-share.jpg` — 1200×630 link-preview image (used by every page).
 - Each page has its own title, description, canonical URL and social tags in the `<head>`. Canonical URLs use the clean form (`/audit`, `/contact`).
 - `404.html` — shown for pages that don't exist.
+
+## Intro video
+`video/intro-720.mp4` (desktop), `video/intro-480.mp4` (phones) and `video/intro-poster.jpg` (still frame) are used by the course section. To swap the video, compress the new one to H.264 MP4 (aim for under 15MB for 720p) and replace those files with the same names. It plays muted when scrolled into view and pauses when scrolled away.

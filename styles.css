@@ -734,3 +734,28 @@ section { padding: clamp(44px, 6vw, 80px) 0; }
 .prose li { margin-bottom: 0.5em; }
 .prose p { max-width: none; }
 .prose .updated { font-size: 0.9rem; opacity: 0.7; }
+
+/* ---------- Mobile hero order: photo first ---------- */
+@media (max-width: 900px) {
+  .hero-grid > .face-wrap { order: -1; }
+  .hero-grid { gap: 28px; }
+}
+
+/* ---------- Course intro video ---------- */
+.course-video {
+  border: 4px solid var(--azure);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--azure);
+  overflow: hidden;
+  background: var(--azure);
+  transform: rotate(2deg);
+  aspect-ratio: 16 / 9;
+}
+.course-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) { .course-video { transform: none; } }
+
+/* ---------- Footer: social icons ---------- */
+.social { display: inline-flex; gap: 14px; align-items: center; margin-right: 18px; vertical-align: middle; }
+.social a { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid rgba(255,255,255,0.35); color: var(--white); transition: color .15s, border-color .15s, transform .15s; }
+.social a:hover, .social a:focus-visible { color: var(--yellow); border-color: var(--yellow); transform: translateY(-2px); }
+.social svg { display: block; }
