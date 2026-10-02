@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261002o">
+  <link rel="stylesheet" href="styles.css?v=20261002p">
 </head>
 <body>
 
@@ -136,13 +136,13 @@
   </div>
 </footer>
 
-<script src="form.js?v=20261002o"></script>
+<script src="form.js?v=20261002p"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
   // Pre-select the topic when arriving from a card on the homepage
   var t = new URLSearchParams(location.search).get("topic");
   if (t) { var s = document.getElementById("topic"); if (s) s.value = t; }
 </script>
-<script src="/analytics.js?v=20261002o"></script>
+<script src="/analytics.js?v=20261002p"></script>
 </body>
 </html>
