@@ -107,3 +107,6 @@
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'><path d='M2 6 C28 2 58 9 96 5 S156 8 198 3' fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
   background-size: 100% .16em; background-position: 0 90%;
 }
+.cs-months { padding-top: clamp(104px, 10vw, 136px); }
+.cs-months .stk { top: -60px; }
+@media (max-width: 700px) { .cs-months { padding-top: 96px; } .cs-months .stk { top: -52px; } }
