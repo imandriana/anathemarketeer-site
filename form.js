@@ -24,6 +24,10 @@
         if (window.atmTrack) {
           var val = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el && el.value ? el.value : undefined; };
           if (eventName === "generate_lead") window.atmTrack("generate_lead", { form_name: "free_brand_audit", lead_source: val("heard_about_me"), budget_range: val("budget"), audience: val("role") });
+          else if (eventName === "apply_intensive_submit") {
+            window.atmTrack("generate_lead", { form_name: "creative_strategy_application", lead_source: val("heard_about_me"), audience: val("role"), commitment: val("commitment"), payment_preference: val("payment_preference") });
+            window.atmTrack("apply_intensive_submit", { form_name: formId });
+          }
           else window.atmTrack(eventName, { form_name: formId });
         }
         var frame = document.getElementById("calendly-frame");
