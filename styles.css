@@ -934,3 +934,20 @@ html { scroll-behavior: smooth; }
 .thread { max-width: 34ch; }
 .cta-final--center h2 { margin-bottom: 1.4rem; }
 .notfor p { max-width: none; }
+
+/* round 3 */
+.page-hero--center .hero-meta { margin: 1.4rem 0 0; opacity: .95; }
+.cs-problem h2 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.05; }
+.pull { margin-top: 1.6rem; padding: 22px 26px; background: var(--azure); color: var(--white); border-radius: var(--radius); border-left: 10px solid var(--yellow); box-shadow: 6px 6px 0 var(--yellow); }
+.pull p { margin: 0; max-width: none; font-size: 1.05rem; }
+.pull .pull-kicker { font-family: var(--head); font-weight: 800; font-size: clamp(1.5rem, 2.6vw, 2rem); text-transform: uppercase; color: var(--yellow); margin-bottom: .4rem; }
+.pull strong { color: var(--yellow); }
+.toolkit .icon { background: var(--azure); border-color: var(--azure); }
+.cs-journey h2 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); white-space: nowrap; }
+@media (max-width: 400px) { .cs-journey h2 { white-space: normal; } }
+.cs-invest .lead { max-width: none; font-size: clamp(.78rem, 2.5vw, 1.15rem); white-space: nowrap; }
+.cs-problem h2 { font-size: clamp(1.6rem, 2.5vw, 2.1rem); }
+.cs-journey h2 { white-space: normal; }
+.cs-invest .lead { white-space: normal; font-size: 1.05rem; }
+@media (min-width: 700px) { .cs-journey h2 { white-space: nowrap; } .cs-invest .lead { white-space: nowrap; max-width: none; } }
+@media (min-width: 700px) and (max-width: 900px) { .cs-journey h2 { font-size: 1.4rem; } .cs-invest .lead { font-size: .95rem; } }

@@ -38,7 +38,7 @@ Do not add a `CNAME` file until DNS is set up, or the `github.io` address stops 
 Check GitHub's current Pages docs if any of those IPs have changed.
 
 ## If a change doesn't show up
-Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002n` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
+Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002o` (and the same for `script.js` and `form.js`). When styles change, bump that date in every page's `<link>` and `<script>` tags so visitors get the new version straight away.
 
 ## SEO files
 - `sitemap.xml` and `robots.txt` — add a new `<url>` to the sitemap whenever you add a page.
