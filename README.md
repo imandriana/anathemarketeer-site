@@ -51,3 +51,6 @@ Browsers cache the stylesheet. The pages load it as `styles.css?v=20261002p` (an
 
 ## Analytics (Google Analytics 4, `G-J2CDC7NSRZ`)
 `analytics.js` shows the cookie banner and only loads Google Analytics after a visitor clicks Accept, and only on anathemarketeer.com. Custom events it sends: `audit_cta_click`, `apply_cta_click`, `apply_intensive_submit`, `generate_lead` (audit form or Intensive application submitted; `form_name` tells them apart), `book_call` (Calendly booking made), `contact_form_submit`, `newsletter_signup`, `checklist_banner_click`, `course_click`, `social_click`, `phlare_click`, `youtube_click`. In GA4, mark `generate_lead` and `book_call` as key events.
+
+## Texture layer
+`texture.css` holds the grain, halftone dots, hand-drawn underlines/circles (`.scrawl`, `.circled`), perforated section seams, press-pass testimonials, ticket-stub cards and stickers (`.stk`). It loads after `styles.css`. To remove the whole look, delete the `<link ... texture.css>` line from each page (or `git revert` the "Add texture layer" commit).
