@@ -110,3 +110,27 @@
 .cs-months { padding-top: clamp(104px, 10vw, 136px); }
 .cs-months .stk { top: -60px; }
 @media (max-width: 700px) { .cs-months { padding-top: 96px; } .cs-months .stk { top: -52px; } }
+
+/* ---- 7. Doodles (arrows + sparkles) and highlighter swipes ---- */
+.doodle { position: absolute; pointer-events: none; color: var(--yellow); }
+.doodle-arrow { width: 92px; height: 70px; left: calc(100% + 10px); top: -34px; transform: scaleX(-1) rotate(-10deg); }
+.doodle-arrow--azure { color: var(--azure); }
+.hero-actions, .cta-wrap { position: relative; display: inline-block; }
+.hero-actions { display: flex; }
+.hero-actions .doodle-arrow { left: 360px; }
+.cta-final .cta-wrap .doodle-arrow { color: var(--azure); }
+.cs-invest .doodle-arrow, .cs-problem .doodle-arrow { color: var(--azure); }
+.hero h1 { position: relative; }
+.hero h1 .doodle-spark { width: 54px; height: 54px; right: -6px; top: -34px; transform: rotate(8deg); }
+.page-hero--center .wrap { position: relative; }
+.doodle-spark--l, .doodle-spark--r { width: 64px; height: 64px; top: -6px; }
+.doodle-spark--l { left: 6%; transform: rotate(-10deg); }
+.doodle-spark--r { right: 6%; transform: rotate(14deg) scale(.8); }
+.hl {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M1 6 C40 2 120 3 199 5 L197 17 C140 19 60 18 3 16 Z' fill='%23FFCB01' fill-opacity='.7'/></svg>") no-repeat 0 78% / 100% .62em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 0 .12em; margin: 0 -.12em;
+}
+@media (max-width: 900px) { .doodle-arrow, .doodle-spark { display: none; } }
+.hl { background-size: 100% .8em; background-position: 0 70%; }
+.cta-final .cta-wrap .doodle-arrow { top: -4px; left: calc(100% + 6px); }
+.hl { background-size: 100% 1.1em; background-position: 0 55%; }
