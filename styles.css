@@ -1034,3 +1034,11 @@ html { scroll-behavior: smooth; }
 .cs-problem.bf-problem .pull p { font-size: 1.25rem; font-family: var(--head); font-weight: 700; }
 .pull .y { color: var(--yellow); }
 .cs-proof .quotes { margin-bottom: 2.6rem; }
+
+/* ---- v3: course hero title, free-preview tags, audience names ---- */
+.bf-hero h1.eyebrow { font-family: var(--body, "Poppins", sans-serif); font-weight: 600; font-size: .85rem; line-height: 1.2; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 .9em; max-width: none; color: var(--yellow); opacity: 1; }
+.bf-hero .bf-title { font-family: var(--head); font-weight: 800; color: var(--white); font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 .45em; max-width: none; }
+.free-tag { display: inline-block; margin-left: .5em; padding: 2px 10px; background: var(--yellow); color: var(--azure); border: 2px solid var(--azure); border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; vertical-align: middle; }
+.free-tag:hover { background: var(--azure); color: var(--yellow); }
+.free-link { font-weight: 700; color: var(--azure); text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+.fit h3 { display: inline-block; background: var(--yellow); color: var(--azure); border: 3px solid var(--azure); border-radius: 12px; box-shadow: 3px 3px 0 var(--azure); padding: .18em .6em .22em; font-size: clamp(1.35rem, 2vw, 1.65rem); margin: 0 0 .8rem; }
