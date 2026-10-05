@@ -1005,3 +1005,32 @@ html { scroll-behavior: smooth; }
 .founders-tag { display: inline-block; background: var(--yellow); color: var(--azure); font-family: var(--font-head, inherit); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; padding: 6px 14px; border: 2px solid var(--azure); border-radius: 999px; box-shadow: 3px 3px 0 var(--azure); transform: rotate(-2deg); margin: .2rem 0 .6rem; }
 .cs-invest .price .was { font-size: .45em; opacity: .5; font-weight: 700; margin-right: .15em; text-decoration-thickness: .09em; }
 .bf-fine s { opacity: .6; }
+
+/* ---- v2: proof, testimonials, cards ---- */
+.stats--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .stats--three { grid-template-columns: 1fr; } }
+.stats--three .stat span { font-size: .95rem; }
+.stat-note { margin: .9rem 0 0; font-size: .85rem; opacity: .75; max-width: none; }
+.quotes--two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .quotes--two { grid-template-columns: 1fr; } }
+.cs-proof .quotes .quote { margin: 0; }
+.cs-proof .stats { margin-bottom: 0; }
+.cs-proof .stat-note { text-align: center; }
+.quote .who { border-top: 0 !important; border-bottom: 2px dashed currentColor; padding: 0 0 .9rem !important; margin: 0 0 1.1rem; }
+.quote .who strong { font-size: clamp(1.6rem, 2.4vw, 2rem); line-height: 1.05; }
+.quote .who span { display: block; margin-top: .25em; font-size: .85rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; opacity: .85; }
+.quote blockquote { font-size: 1.08rem; }
+.quote .valued { margin: 0 0 1.1rem; max-width: none; font-size: .9rem; line-height: 1.45; }
+.receipts-sub { margin: clamp(36px, 5vw, 56px) 0 .2rem; font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+.receipts-subnote { margin: 0 0 .4rem; opacity: .8; }
+.receipts > .lead { margin-top: 0; }
+.cred { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.1rem 0 1.2rem; max-width: none; }
+.cred span { background: var(--yellow); color: var(--azure); border: 2px solid var(--azure); border-radius: 999px; padding: 5px 14px; font-size: .85rem; font-weight: 600; }
+.cs-connect { padding: clamp(40px, 6vw, 72px) 0; }
+.cs-connect h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); text-align: left; }
+.cs-connect .lead { text-align: left; }
+.quotes-list--plain li { font-style: normal; font-weight: 500; }
+.cs-problem.bf-problem .pull { margin-top: 1.4rem; text-align: center; }
+.cs-problem.bf-problem .pull p { font-size: 1.25rem; font-family: var(--head); font-weight: 700; }
+.pull .y { color: var(--yellow); }
+.cs-proof .quotes { margin-bottom: 2.6rem; }
