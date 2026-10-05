@@ -28,8 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Oswald:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261005g">
-  <link rel="stylesheet" href="texture.css?v=20261005g">
+  <link rel="stylesheet" href="styles.css?v=20261005h">
+  <link rel="stylesheet" href="texture.css?v=20261005h">
 </head>
 <body>
 
@@ -95,6 +95,24 @@
             <textarea id="a-challenge" name="challenge" required></textarea>
           </div>
           <div class="field">
+            <label for="a-support">What kind of support sounds right?</label>
+            <select id="a-support" name="support_style" required>
+              <option value="">Choose one</option>
+              <option>Clear answers I can apply myself</option>
+              <option>A partner who preps, checks in and keeps me on track</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="a-time">How much time could you put in each week?</label>
+            <select id="a-time" name="weekly_time" required>
+              <option value="">Choose one</option>
+              <option>Under 1 hour</option>
+              <option>1&ndash;3 hours</option>
+              <option>3+ hours</option>
+            </select>
+          </div>
+          <div class="field">
             <label for="a-budget">Budget range</label>
             <select id="a-budget" name="budget" required>
               <option value="">Choose one</option>
@@ -156,8 +174,8 @@
   </div>
 </footer>
 
-<script src="form.js?v=20261005g"></script>
+<script src="form.js?v=20261005h"></script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script src="/analytics.js?v=20261005g"></script>
+<script src="/analytics.js?v=20261005h"></script>
 </body>
 </html>
