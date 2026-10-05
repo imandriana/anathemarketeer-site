@@ -998,3 +998,6 @@ html { scroll-behavior: smooth; }
 .bf-about .cs-split { align-items: center; }
 .bf-problem h2, .bf-vs h2, .bf-curriculum h2, .bf-about h2 { font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
 .bf-problem .quotes-list { margin-bottom: 1.4rem; }
+
+.bf-about .cs-split { grid-template-columns: minmax(0,440px) minmax(0,520px); justify-content: center; }
+@media (max-width:860px){ .bf-about .cs-split { grid-template-columns: minmax(0,1fr); } }
