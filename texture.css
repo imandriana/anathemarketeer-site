@@ -127,3 +127,8 @@
 }
 @media (max-width: 900px) { .hl { background-size: 100% .8em; background-position: 0 70%; }
 .cta-final .cta-wrap .hl { background-size: 100% 1.1em; background-position: 0 55%; }
+.bf-vs, .bf-hero { position: relative; }
+.bf-curriculum { --perf: var(--azure); } .bf-about { --perf: var(--white); }
+.bf-curriculum::before { content: ""; position: absolute; z-index: 3; pointer-events: none; left: 0; right: 0; top: -9px; height: 18px; background: radial-gradient(circle at 12px 9px, var(--perf) 6.5px, transparent 7px) 0 0 / 28px 18px repeat-x; }
+.bf-curriculum { position: relative; }
+.cs-proof .quote::after { color: currentColor; opacity: .75; }
