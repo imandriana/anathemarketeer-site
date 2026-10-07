@@ -1064,3 +1064,5 @@ html { scroll-behavior: smooth; }
 .oc-note { margin-top: 1.8rem; text-align: center; max-width: none; font-weight: 600; }
 @media (max-width: 900px) { .oc-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) { .oc-grid { grid-template-columns: 1fr; } }
+
+.cs-outcomes .lead.lead--full { max-width: none; }
