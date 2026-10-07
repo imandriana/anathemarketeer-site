@@ -1074,3 +1074,10 @@ html { scroll-behavior: smooth; }
 .oc-path li span { display: block; font-size: .95rem; line-height: 1.45; }
 @media (max-width: 900px) { .oc-path { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) { .oc-path { grid-template-columns: 1fr; } }
+
+/* v6: section order + FAQ dark */
+.band.cs-outcomes { background: var(--white); }
+.band.cs-faq { background: var(--azure); color: var(--white); }
+.cs-faq h2 { color: var(--white); }
+.cs-faq details { box-shadow: none; border-color: var(--white); color: var(--azure); padding-left: 38px; }
+.cs-faq details[open] { border-color: var(--yellow); }
